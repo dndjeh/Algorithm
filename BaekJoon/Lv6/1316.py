@@ -19,7 +19,7 @@ for _ in range(N):
     arr = []
     bol = False
     tmp = 0 
-    while tmp < len(text)-1: #반복문 때문에 마지막 영어를 조회해서 else로 진입 해버린다.               
+    while tmp < len(text)-1:  
         if text[tmp] not in arr: #
             arr.append(text[tmp])     
             for j in range(tmp+1, len(text)):
