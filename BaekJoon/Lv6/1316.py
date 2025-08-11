@@ -17,22 +17,20 @@ for _ in range(N):
     text = input()
     #bol_list = [False] * len(text)
     arr = []
-    bol = False
-    tmp = 0 
-    while tmp < len(text)-1:  
-        if text[tmp] not in arr: #
-            arr.append(text[tmp])     
-            for j in range(tmp+1, len(text)):
-                if text[tmp] != text[j]:
-                    tmp=j
-                    break
-        
-        else: #그룹 단어 아님
-            bol = True
-            break
 
-    
-    if not bol :
+                    break
+                    
+                elif  text[idx] == text[j]:
+                    idx+=1
+                    if idx == len(text)-1 and j == len(text)-1:
+                        aa = True #마지막 비교
+
+            if aa == False:
+                bol = False
+                break
+        
+
+    if bol :
         count+=1
 
 print(count)
