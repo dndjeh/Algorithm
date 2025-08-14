@@ -14,25 +14,21 @@ N = int(input())
 count = 0
 
 for _ in range(N):
-    text = input()
-    #bol_list = [False] * len(text)
+    word = input()
     arr = []
+    is_group = True
 
-                    break
-                    
-                elif  text[idx] == text[j]:
-                    idx+=1
-                    if idx == len(text)-1 and j == len(text)-1:
-                        aa = True #마지막 비교
+    for i in range(1, len(word)):
+        if word[i - 1] != word[i]:
+            arr.append(word[i - 1])
 
-            if aa == False:
-                bol = False
-                break
+        if i + 1 < len(word) and word[i + 1] in arr:
+            is_group = False
+            break
         
 
-    if bol :
+    if is_group :
         count+=1
 
 print(count)
                 
-            
