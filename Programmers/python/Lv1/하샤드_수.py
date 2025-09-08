@@ -9,5 +9,3 @@ def solution(x):
         return True
     else:
         return False
-
-solution(123)
